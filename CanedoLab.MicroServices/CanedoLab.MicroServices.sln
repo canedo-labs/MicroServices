@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31515.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C016440B-EE2D-4BAA-B0E9-B534147130AC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Building Blocks", "Building Blocks", "{7285F934-4690-456C-B36B-6B489131C961}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{0C05B932-2A9D-41C0-B96D-A1CF1BE1EE89}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identity", "Identity", "{583C4D6B-40F9-4FB1-AFBA-3757EFC0F784}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CanedoLab.MS.Identity.API", "src\services\CanedoLab.MS.Identity.API\CanedoLab.MS.Identity.API.csproj", "{6CF10948-070D-452D-BCDE-2918BA370832}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{BD3FE905-8407-4CA0-8156-03158BCD9967}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CanedoLab.MS.Core", "src\building blocks\CanedoLab.MS.Core\CanedoLab.MS.Core.csproj", "{E8F0EBFA-E5C2-4567-9057-5F8249FF472B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6CF10948-070D-452D-BCDE-2918BA370832}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CF10948-070D-452D-BCDE-2918BA370832}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CF10948-070D-452D-BCDE-2918BA370832}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CF10948-070D-452D-BCDE-2918BA370832}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8F0EBFA-E5C2-4567-9057-5F8249FF472B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8F0EBFA-E5C2-4567-9057-5F8249FF472B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8F0EBFA-E5C2-4567-9057-5F8249FF472B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8F0EBFA-E5C2-4567-9057-5F8249FF472B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7285F934-4690-456C-B36B-6B489131C961} = {C016440B-EE2D-4BAA-B0E9-B534147130AC}
+		{0C05B932-2A9D-41C0-B96D-A1CF1BE1EE89} = {C016440B-EE2D-4BAA-B0E9-B534147130AC}
+		{583C4D6B-40F9-4FB1-AFBA-3757EFC0F784} = {0C05B932-2A9D-41C0-B96D-A1CF1BE1EE89}
+		{6CF10948-070D-452D-BCDE-2918BA370832} = {583C4D6B-40F9-4FB1-AFBA-3757EFC0F784}
+		{BD3FE905-8407-4CA0-8156-03158BCD9967} = {7285F934-4690-456C-B36B-6B489131C961}
+		{E8F0EBFA-E5C2-4567-9057-5F8249FF472B} = {BD3FE905-8407-4CA0-8156-03158BCD9967}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {17E559EC-FF7B-431E-9893-F859E80D69BA}
+	EndGlobalSection
+EndGlobal
