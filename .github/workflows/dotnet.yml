@@ -1,10 +1,8 @@
 name: .NET
 
 on:
-  push:
-    branches: [ main ]
+  push:    
   pull_request:
-    branches: [ main ]
 
 jobs:
   build:
@@ -13,13 +11,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Setup .NET
+    - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 5.0.x
+        dotnet-version: 5.0.301
     - name: Restore dependencies
-      run: dotnet restore ./CanedoLab.MS.Identity.API/
+      run: dotnet restore
     - name: Build
-      run: dotnet build --no-restore ./CanedoLab.MS.Identity.API/
+      run: dotnet build --configuration Release --no-restore
     - name: Test
-      run: dotnet test --no-build --verbosity normal ./CanedoLab.MS.Identity.API/
+      run: dotnet test --no-restore --verbosity normal
