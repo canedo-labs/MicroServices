@@ -35,7 +35,7 @@ namespace CanedoLab.MS.Identity.API.Controllers
         {
             if (ModelState.IsValid == false)
             {
-                return Response(ModelState);
+                return CreateResponse(ModelState);
             }
 
             var user = new IdentityUser
@@ -54,10 +54,10 @@ namespace CanedoLab.MS.Identity.API.Controllers
                     AddError(identityError.Description);
                 }
 
-                return Response();
+                return CreateResponse();
             }
 
-            return Response(await CreateUserAuth(userRegistration.Email));
+            return CreateResponse(await CreateUserAuth(userRegistration.Email));
         }
 
         [HttpPost("login")]
@@ -65,7 +65,7 @@ namespace CanedoLab.MS.Identity.API.Controllers
         {
             if (ModelState.IsValid == false)
             {
-                return Response(ModelState);
+                return CreateResponse(ModelState);
             }
 
             var result = await _signInManager.PasswordSignInAsync(userLogin.Email,
@@ -79,15 +79,15 @@ namespace CanedoLab.MS.Identity.API.Controllers
                 {
                     AddError("User is temporarily blocked.");
 
-                    return Response();
+                    return CreateResponse();
                 }
 
                 AddError("Email or password invalid.");
 
-                return Response();
+                return CreateResponse();
             }
 
-            return Response(await CreateUserAuth(userLogin.Email));
+            return CreateResponse(await CreateUserAuth(userLogin.Email));
         }
 
         private async Task<UserAuthenticationViewModel> CreateUserAuth(string email)

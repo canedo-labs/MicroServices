@@ -14,7 +14,7 @@ namespace CanedoLab.MS.Identity.API.Controllers
 
         public bool HasErrors => Errors.Any();
 
-        protected ActionResult Response([Optional] object result) 
+        protected ActionResult CreateResponse([Optional] object result) 
         {
             if (HasErrors) 
             {
@@ -27,7 +27,7 @@ namespace CanedoLab.MS.Identity.API.Controllers
             return Ok(result);
         }
 
-        protected ActionResult Response(ModelStateDictionary modelState) 
+        protected ActionResult CreateResponse(ModelStateDictionary modelState) 
         {
             var errors = modelState.Values.SelectMany(v => v.Errors);
 
@@ -36,7 +36,7 @@ namespace CanedoLab.MS.Identity.API.Controllers
                 AddError(error.ErrorMessage);
             }
 
-            return Response();
+            return CreateResponse();
         }
 
         protected ICollection<string> AddError(string errorMessage) 

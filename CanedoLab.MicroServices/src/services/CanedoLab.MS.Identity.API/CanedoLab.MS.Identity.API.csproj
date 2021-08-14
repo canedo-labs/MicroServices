@@ -4,8 +4,7 @@
     <TargetFramework>net5.0</TargetFramework>
     <UserSecretsId>d8ab9ec3-12fd-4748-b640-8b1075a6ae22</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-    <DockerfileContext>..\..\..</DockerfileContext>
-	  <Nullable>enable</Nullable>
+    <DockerfileContext>..\..\..</DockerfileContext>	  
   </PropertyGroup>
 
   <ItemGroup>
