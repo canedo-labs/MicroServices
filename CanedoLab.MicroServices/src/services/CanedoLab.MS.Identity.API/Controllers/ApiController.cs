@@ -14,7 +14,7 @@ namespace CanedoLab.MS.Identity.API.Controllers
 
         public bool HasErrors => Errors.Any();
 
-        protected ActionResult CreateResponse([Optional] object result) 
+        protected ActionResult CreateResponse([Optional] object result)
         {
             if (HasErrors) 
             {
