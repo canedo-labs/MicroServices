@@ -18,8 +18,8 @@ jobs:
       with:
         dotnet-version: 5.0.400
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore CanedoLab.MicroServices/src/services/CanedoLab.MS.Identity.API/CanedoLab.MS.Identity.API.csproj
     - name: Build
-      run: dotnet build --no-restore
+      run: dotnet build --no-restore CanedoLab.MicroServices/src/services/CanedoLab.MS.Identity.API/CanedoLab.MS.Identity.API.csproj
     #- name: Test
     #  run: dotnet test --no-build --verbosity normal
