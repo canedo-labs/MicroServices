@@ -3,7 +3,10 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <Platforms>AnyCPU;ARM32</Platforms>
-    <Configurations>Debug;Release;a</Configurations>
   </PropertyGroup>
+  
+  <ItemGroup>
+	<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.9" />	
+  </ItemGroup>
 
 </Project>

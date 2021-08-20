@@ -1,14 +1,14 @@
-using CanedoLab.MS.Identity.API.Configuration;
+using CanedoLab.MS.Catalog.API.Configuration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace CanedoLab.MS.Identity.API
+namespace CanedoLab.MS.Catalog.API
 {
     public class Startup
     {
-        private readonly IConfiguration Configuration;
+        private IConfiguration Configuration { get; }
 
         public Startup(IConfiguration configuration)
         {
@@ -19,16 +19,17 @@ namespace CanedoLab.MS.Identity.API
         {
             services
                 .AddDbContextConfig(Configuration)
-                .AddIdentityConfig(Configuration)
                 .AddApiConfig()
-                .AddSwaggerConfig();            
+                .AddJwtConfig(Configuration)
+                .AddDependencyInjection()
+                .AddSwaggerConfig();
         }
         
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             app
                 .UseSwaggerConfig()
-                .UseApiConfig(env);            
+                .UseApiConfig(env);
         }
     }
 }
